@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "8c4eb3b8-3302-45e8-b970-3ae74f1947a4",
+		"name": "NestJS_Mongo_ToDoList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Clean\",\r\n    \"description\":\"Clean The House\",\r\n    \"dueOn\":\"1991/08/08\",\r\n    \"status\":\"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/todolist/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todolist",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/todolist/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todolist",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get task by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/todolist/getOne/623a83d69280fc722f3a9259",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todolist",
+						"getOne",
+						"623a83d69280fc722f3a9259"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "623a83d69280fc722f3a9259",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "623a83d69280fc722f3a9259",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/todolist/delete?taskId=623a83d69280fc722f3a9259",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todolist",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "623a83d69280fc722f3a9259"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Say Hi!\",\r\n    \"description\":\"Visit The New Neibordhood And Say Hi!\",\r\n    \"status\":\"Complete\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/todolist/update?taskId=623a8a5a6d0c9c77d55f6c07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todolist",
+						"update"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "623a8a5a6d0c9c77d55f6c07"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Inactive\",\r\n    \"type\":\"User\",\r\n    \"state\":\"Active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/dropdowns/createStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dropdowns",
+						"createStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dropdowns/getAllStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dropdowns",
+						"getAllStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all by type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dropdowns/getStatusByType?statusType=User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dropdowns",
+						"getStatusByType"
+					],
+					"query": [
+						{
+							"key": "statusType",
+							"value": "User"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Inactive\",\r\n    \"type\":\"User\",\r\n    \"state\":\"Active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/dropdowns/updateStatus?statusId=623a9bcb42f8003945a3c12b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dropdowns",
+						"updateStatus"
+					],
+					"query": [
+						{
+							"key": "statusId",
+							"value": "623a9bcb42f8003945a3c12b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete status",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dropdowns/deleteStatus?statusId=623a9bcb42f8003945a3c12b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dropdowns",
+						"deleteStatus"
+					],
+					"query": [
+						{
+							"key": "statusId",
+							"value": "623a9bcb42f8003945a3c12b"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
